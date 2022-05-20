@@ -51,15 +51,20 @@
 
         // ====== exercise 3 ======
         
+        // 費波那企數列: 總和= 前一個數 + 現在的數
         let fibonacciGenerator = (n) => {
             let a = 0; // 前一個數
             let b = 1; // 現在的數
-            let array = []
-            for (let i = 0; i < n; i++) {
-                let c = a + b;
-                array.push(a);               
-                a = b; 
-                b = c;
+            let array = [] // 先讓陣列是空陣列
+            for (let i = 0; i < n; i++) { 
+                // i代表要跑幾次迴圈
+                
+                let c = a + b; //總和= 前一個數 + 現在的數
+                
+                array.push(a); // 用push先把 前一個數a=0放入陣列，接下來會把新增的數加在末端
+                
+                a = b; // 讓 前前一個數 變 前一個數
+                b = c; // 讓 前一個數 變 現在的數
             }
             return array            
         }
