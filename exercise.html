@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+
+<body>
+    <script>
+        // ====== exercise 1 ======
+
+        let age = 10
+        // type1
+        // let handleAge = age => {
+        //     if (age > 18) {
+        //         return "成人"
+        //     } else if (age < 18 && age < 12) {
+        //         return "青少年"
+        //     } else {
+        //         return "兒童"
+        //     }
+        // }
+        // let result = handleAge(10);
+        // console.log(result);
+
+        // type2
+        let handleAge = (age) => {
+            return (age > 18) ? "成人" : (age > 12) ? "青少年" : "兒童"
+        }
+        console.log(handleAge(age));
+
+            // ====== exercise 2 ======
+
+            // 立即執行函式
+
+            ((color) => {
+                switch (color) {
+                    case "red":
+                        console.log("紅色");
+                        break;
+                    case "blue":
+                        console.log("藍色");
+                        break;
+                    default:
+                        console.log("其他顏色");
+                }
+            })("pink");
+
+        // ====== exercise 3 ======
+        
+        let fibonacciGenerator = (n) => {
+            let a = 0; // 前一個數
+            let b = 1; // 現在的數
+            let array = []
+            for (let i = 0; i < n; i++) {
+                let c = a + b;
+                array.push(a);               
+                a = b; 
+                b = c;
+            }
+            return array            
+        }
+        console.log(fibonacciGenerator(20))
+        // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+
+
+    </script>
+</body>
+
+</html>
